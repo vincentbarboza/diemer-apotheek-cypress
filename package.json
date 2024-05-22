@@ -1,0 +1,19 @@
+{
+  "name": "diemerapotheek",
+  "version": "1.0.0",
+  "description": "Cypress tests for Diemer Apotheek",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentbarboza/diemer-apotheek-cypress.git"
+  },
+  "author": "Vincent Barboza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincentbarboza/diemer-apotheek-cypress/issues"
+  },
+  "homepage": "https://github.com/vincentbarboza/diemer-apotheek-cypress#readme"
+}
