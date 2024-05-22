@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/vincentbarboza/diemer-apotheek-cypress/issues"
   },
-  "homepage": "https://github.com/vincentbarboza/diemer-apotheek-cypress#readme"
+  "homepage": "https://github.com/vincentbarboza/diemer-apotheek-cypress#readme",
+  "dependencies": {
+    "cypress": "^13.10.0",
+    "latest": "^0.2.0"
+  }
 }
