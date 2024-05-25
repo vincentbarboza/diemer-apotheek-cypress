@@ -1,31 +1,53 @@
-Disable eslint rules
-You can disable specific rules per file, for a portion of a file, or for a single line.
+# Pharmacy Diemer Apotheek E2E Testing with Cypress and TypeScript
 
-Disable the cypress/no-unnecessary-waiting rule for the entire file by placing this at the start of the file:
+This project implements end-to-end (E2E) tests for a pharmacy application using Cypress and TypeScript. The tests are designed to be run directly in the production environment to ensure that all critical functionalities are working as expected.
 
-/* eslint-disable cypress/no-unnecessary-waiting */
-Disable the cypress/no-unnecessary-waiting rule for only a portion of the file:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running Tests](#running-tests)
+- [License](#license)
 
-it('waits for a second', () => {
-  ...
-  /* eslint-disable cypress/no-unnecessary-waiting */
-  cy.wait(1000)
-  /* eslint-enable cypress/no-unnecessary-waiting */
-  ...
-})
-Disable the cypress/no-unnecessary-waiting rule for a specific line:
+## Introduction
+This project aims to provide comprehensive E2E tests for a pharmacy's web application. Using Cypress with TypeScript, the tests cover various scenarios to ensure the reliability and stability of the production system.
 
-it('waits for a second', () => {
-  ...
-  cy.wait(1000) // eslint-disable-line cypress/no-unnecessary-waiting
-  ...
-})
-You can also disable a rule for the next line:
+## Features
+- **TypeScript Integration**: Leveraging TypeScript for type safety and better development experience.
+- **Cypress Testing**: Utilizing Cypress for robust and reliable E2E testing.
+- **Production Testing**: Executing tests directly in the production environment to validate real-world functionality.
 
-it('waits for a second', () => {
-  ...
-  // eslint-disable-next-line cypress/no-unnecessary-waiting
-  cy.wait(1000)
-  ...
-})
-For more, see the ESLint rules documentation.
+## Installation
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+    git clone https://github.com/yourusername/pharmacy-e2e-tests.git
+
+2. **Install dependencies**:
+    npm install
+
+## Configuration
+Before running the tests, make sure to configure the necessary environment variables. Create a `.env` file in the root of the project with the following variables:
+
+CYPRESS_BASE_URL=https://your-production-url.com
+CYPRESS_USERNAME=your-username
+CYPRESS_PASSWORD=your-password
+
+## Running Tests
+To run the tests, use the following commands:
+
+- **Open Cypress Test Runner**:
+    npm run cypress
+
+- **Run Tests in Headless Mode**:
+
+- **cypress/fixtures**: Contains test data and fixtures.
+- **cypress/e2e**: Contains the actual test files.
+- **cypress/support**: Includes support files and global configurations.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+
+Feel free to customize this README further to better suit your project's specifics.
