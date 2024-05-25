@@ -4,7 +4,8 @@
   "description": "Cypress tests for Diemer Apotheek",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress": "npx cypress open --e2e -b chrome",
+    "eslint-cypress": "npx eslint cypress/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/vincentbarboza/diemer-apotheek-cypress#readme",
   "devDependencies": {
     "cypress": "^13.10.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-cypress": "^3.2.0",
     "typescript": "^5.4.5"
   }
 }
