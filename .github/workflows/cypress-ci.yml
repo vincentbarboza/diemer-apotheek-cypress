@@ -36,3 +36,6 @@ jobs:
 
       - name: Run ESLint
         run: npm run eslint-cypress
+
+      - name: List files for debugging
+        run: ls -la
