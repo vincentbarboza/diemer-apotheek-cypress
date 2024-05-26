@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress-open": "npx cypress open --e2e -b chrome",
-    "cypress": "npx cypress run -b chrome",
+    "cypress-headless": "npx cypress run -b chrome",
     "eslint-cypress": "npx eslint cypress/**/*.ts"
   },
   "repository": {
