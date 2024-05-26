@@ -20,4 +20,4 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run ESLint
-      run: npm install eslint-cypress
+      run: npm run eslint-cypress
