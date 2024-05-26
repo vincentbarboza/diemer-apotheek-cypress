@@ -28,3 +28,7 @@ jobs:
     - name: Eslint
       run: npm run eslint-cypress
 
+    - name: Cypress run
+      uses: cypress-io/github-action@v6
+      run: npm run cypress-headless
+
