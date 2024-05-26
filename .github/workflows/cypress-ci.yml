@@ -31,16 +31,28 @@ jobs:
         with:
           node-version: 18
 
+      - name: List files for debugging
+        run: ls -la
+
       - name: Install Dependencies
         run: npm install
+
+      - name: Show installed packages
+        run: npm list
 
       - name: Run ESLint
         run: npm run eslint-cypress --verbose
 
-      - name: List files for debugging
-        run: ls -la
+      - name: Run ESLint
+        run: |
+          echo "Running ESLint on the following files:"
+          ls cypress/**/*.ts
+          npm run eslint-cypress --verbose
 
-      - name: Show installed packages
-        run: npm list
+      - name: List project files
+        run: ls -R
+
+      - name: Show ESLint version
+        run: npx eslint --version
 
 
