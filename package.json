@@ -4,7 +4,8 @@
   "description": "Cypress tests for Diemer Apotheek",
   "main": "index.js",
   "scripts": {
-    "cypress": "npx cypress open --e2e -b chrome",
+    "cypress-open": "npx cypress open --e2e -b chrome",
+    "cypress": "npx cypress run -b chrome",
     "eslint-cypress": "npx eslint cypress/**/*.ts"
   },
   "repository": {

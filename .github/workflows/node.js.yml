@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  Tests on node version:
 
     runs-on: ubuntu-latest
 
@@ -29,5 +29,8 @@ jobs:
     - name: Eslint
       run: npm run eslint-cypress
 
+  
+  Cypress on node version:
     - name: Cypress
-      run: npx cypress run
+      run: npm run cypress
+
