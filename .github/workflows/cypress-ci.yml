@@ -14,14 +14,18 @@ jobs:
 
   
   eslint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/setup-node@v4
-      with:
-        node-version: ^18.18.0
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install modules
-      run: npm install 
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Run ESLint
-      run: npm run eslint-cypress
+      - name: Run ESLint
+        run: npm run eslint-cypress
