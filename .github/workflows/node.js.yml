@@ -29,8 +29,6 @@ jobs:
     - name: Eslint
       run: npm run eslint-cypress
 
-  
-  Cypress on node version:
     - name: Cypress
       run: npm run cypress
 
