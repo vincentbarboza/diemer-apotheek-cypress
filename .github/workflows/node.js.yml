@@ -24,7 +24,7 @@ jobs:
         cache: 'npm'
 
     - name: Eslint
-    - run: npm run eslint-cypress
+      run: npm run eslint-cypress
 
     - name: Cypress
-    - run: npx cypress run
+      run: npx cypress run
