@@ -35,7 +35,11 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npm run eslint-cypress
+        run: npm run eslint-cypress --verbose
 
       - name: List files for debugging
         run: ls -la
+
+      - name: Run ESLint
+        run: npm run eslint-cypress --verbose
+
