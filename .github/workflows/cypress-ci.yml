@@ -1,34 +1,16 @@
-name: eslint tests
+name: Cypress Tests
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, ^18.18.0, ^20.9.0, ^21.1.0]
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-
-    - name: Cypress install
-      uses: cypress-io/github-action@v6
-      with:
-        build: npm run build
-        start: npm start
-
-    - name: npm install
-      run: npm install
-
-
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
