@@ -18,6 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: npm install 
+      
     - name: Run ESLint
       run: npm run eslint-cypress
