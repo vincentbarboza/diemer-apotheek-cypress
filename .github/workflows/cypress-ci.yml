@@ -24,8 +24,9 @@ jobs:
 
     - name: Cypress install
       uses: cypress-io/github-action@v6
-      with:
-        runTests: false
+        with:
+          build: npm run build
+          start: npm start
 
     - name: npm install
       run: npm install
