@@ -22,16 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - name: npm install
-      run: npm install
-      
-    - name: Eslint
-      run: npm run eslint-cypress
-
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      uses: actions/checkout@v4
+    - name: npm start
+      run: npm start
 
     - name: Cypress run
       uses: cypress-io/github-action@v6
