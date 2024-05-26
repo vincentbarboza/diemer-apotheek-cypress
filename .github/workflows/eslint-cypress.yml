@@ -1,4 +1,4 @@
-name: Cypress project
+name: eslint tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  tests:
+  eslint:
     runs-on: ubuntu-latest
 
     strategy:
