@@ -7,7 +7,6 @@ export default defineConfig({
   e2e: {
     baseUrl: 'https://diemerapotheek.nl/',
     setupNodeEvents(on, config) {
-      return cloudPlugin(on, config);
     },
   },
 });
