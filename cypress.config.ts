@@ -1,5 +1,4 @@
 import { defineConfig } from "cypress";
-const { cloudPlugin } = require("cypress-cloud/plugin");
 
 export default defineConfig({
   defaultCommandTimeout: 10000,
