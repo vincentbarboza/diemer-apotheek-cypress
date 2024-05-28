@@ -37,35 +37,5 @@ jobs:
       - name: Run ESLint
         run: npm run eslint-cypress
 
-  
-  sorry-cypress:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v1
-
-      - name: Run Docker container
-        run: docker run -d -p 1234:1234 agoldis/sorry-cypress-director
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install Cypress
-        run: npm install cypress@13.10.0
-
-      - name: Install Cypress-cloud
-        run: npm install cypress-cloud cypress
-
-      - name: Install Dependencies for cypress
-        run: sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-
-      - name: Run sorry cypress
-        run: npx cypress-cloud run --parallel --record --key somekey --ci-build-id hello-cypress
-
 
 
