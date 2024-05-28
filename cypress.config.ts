@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+const { cloudPlugin } = require("cypress-cloud/plugin");
 
 export default defineConfig({
   defaultCommandTimeout: 10000,
@@ -6,7 +7,7 @@ export default defineConfig({
   e2e: {
     baseUrl: 'https://diemerapotheek.nl/',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      return cloudPlugin(on, config);
     },
   },
 });

@@ -37,4 +37,25 @@ jobs:
       - name: Run ESLint
         run: npm run eslint-cypress
 
+  
+  sorry-cypress:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v1
+
+      - name: Run Docker container
+        run: docker run -p 1234:1234 agoldis/sorry-cypress-director
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
 
