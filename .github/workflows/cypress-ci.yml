@@ -47,6 +47,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
